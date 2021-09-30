@@ -1,1 +1,70 @@
 
+package com.act6java;
+
+public class Methods {
+    
+    public int PromedioFinal(int[] a){
+
+        int sum = 0;
+
+        for(int i = 0; i < a.length; i++){
+
+            sum = sum + a[i];
+        }
+
+        int res = sum / a.length;
+
+        return res;
+    }
+
+    public char[] CalificacionFinal(int[] a, char[] b){
+
+        for(int i = 0; i < b.length; i++){
+
+            if(a[i] <= 50){
+
+                b[i] = 'F';
+            } else if(a[i] <= 60 && a[i] >= 51){
+
+                b[i] = 'E';
+            } else if(a[i] <= 70 && a[i] >= 61){
+
+                b[i] = 'D';
+            } else if(a[i] <= 80 && a[i] >= 71){
+
+                b[i] = 'C';
+            } else if(a[i] <= 90 && a[i] >= 81){
+
+                b[i] = 'B';
+            } else if(a[i] >= 91){
+
+                b[i] = 'A';
+            }
+
+        }
+
+        return b;
+    } 
+
+    public void Printer(int a, char[] b, int[] c, String d){
+
+        System.out.println("Nombre del alumno: " + d);
+
+        for(int i = 0; i < b.length; i++){
+
+            System.out.println("Calificación " + i + ": " + c[i] + ", " + b[i]);
+        }
+
+        System.out.println("El promedio es: " + a);
+
+        if(a >= 70){
+
+            System.out.println("Calificación aprobatoria.");
+        } else {
+            System.out.println("Calificación reprobatoria.");
+        }
+
+        return;
+    }
+
+}
